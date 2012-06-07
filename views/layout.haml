@@ -1,0 +1,36 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+  %head
+    %title JOHNNYVILLE SLUGGER
+    %link(rel="stylesheet" href="/stylesheets/application.css")
+  %body
+    .container
+      .span-17
+        %header
+          %img(src="images/header_line1.png" class= 'h-line')
+
+          %section
+            %span#left-hand
+              %img(src="images/hand_left.png")
+            %span#title
+              %div JOHNNYVILLE SLUGGER
+            %span#right-hand
+              %img(src="images/hand_right.png")
+
+          %img(src="images/header_line1.png" class= 'h-line')
+
+      .span-17
+
+        #whomade.left
+          %img(src="images/whomade.png")
+        .redstar
+        %img(src="images/pinstripes.png")
+        %img(src="images/vinnie.png")
+
+
+      .span-17
+        %img(src="images/header_line1.png" class= 'h-line')
+        %section
+          = yield
+          %br
+          /= @links
