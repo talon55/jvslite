@@ -1,4 +1,4 @@
 require 'rubygems'
-require File.join(File.dirname(__FILE__), 'Myapp.rb')
+require File.join(File.dirname(__FILE__), 'jvslite.rb')
 
 run Sinatra::Application

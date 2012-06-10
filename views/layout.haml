@@ -24,13 +24,27 @@
         #whomade.left
           %img(src="images/whomade.png")
         .redstar
-        %img(src="images/pinstripes.png")
-        %img(src="images/vinnie.png")
+        .imgbanner
+          %img(src="images/pinstripes.png")
+          %img(src="images/vinnie.png")
 
 
       .span-17
         %img(src="images/header_line1.png" class= 'h-line')
-        %section
-          = yield
-          %br
-          /= @links
+        %section#bodytext.left
+          %h1 CUSTOM-MADE BASEBALL BATS
+          %p
+            Johnnyville Slugger is your source for the best custom-engraved baseball bats you’ve ever seen. Using only the finest ash, oak, and maple wood, Johnnyville Slugger works hard to create a bat you’re proud to hold, display and show off.
+            %br
+            %br
+            We offer a plethora of custom bats - unique gifts to impress the folks that have everything. You can use these bats for corporate gifts, graduation and birthday gifts, retirement and even baby gifts.
+            %br
+            %br
+            We specialize in putting your custom logo and signature on the bat you choose. Whatever you think of, we can create.
+        .redstar
+        .imgbanner
+          %img(src="images/scriptmade.png" style="margin-top: 35px;")
+          %img#logo(src="images/logo.png" style="margin-top: 35px;")
+
+      .span-17.last#footer
+        %img(src="images/footer_flourish.png")
