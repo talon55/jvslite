@@ -5,7 +5,7 @@ require 'haml'
 
 
 configure do
-  set :haml, {:format => :html5, :escape_html => true}
+  set :haml, {:format => :html5, :escape_html => false}
   set :scss, {:style => :compact, :debug_info => false}
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.rb'))
 end
@@ -17,4 +17,8 @@ end
 
 get '/' do
   haml :index
+end
+
+get '/preview' do
+  haml :preview
 end

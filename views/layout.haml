@@ -20,17 +20,21 @@
           %img(src="images/header_line1.png" class= 'h-line')
 
       .span-17
-
         #whomade.left
           %img(src="images/whomade.png")
         .redstar
-        .imgbanner
-          %img(src="images/pinstripes.png")
+        .imgbanner.left
+          %img(src="images/stones.png")
           %img(src="images/vinnie.png")
 
 
       .span-17
         %img(src="images/header_line1.png" class= 'h-line')
+
+        .imgbanner.left
+          %img(src="images/scriptmade.png" style="margin-top: 35px;")
+          %img#logo(src="images/logo.png" style="margin-top: 35px;")
+        .redstar
         %section#bodytext.left
           %h1 CUSTOM-MADE BASEBALL BATS
           %p
@@ -41,10 +45,22 @@
             %br
             %br
             We specialize in putting your custom logo and signature on the bat you choose. Whatever you think of, we can create.
+
+      .span-17
+        %img(src="images/header_line1.png" class= 'h-line')
+
+        %section#bodytext.left
+          %h1 THE BEST POSSIBLE GIFT FOR UNDER $200
+          %p
+            text
         .redstar
-        .imgbanner
-          %img(src="images/scriptmade.png" style="margin-top: 35px;")
-          %img#logo(src="images/logo.png" style="margin-top: 35px;")
+        .imgbanner.left
+          %img(src="images/who.png")
+          %img(src="images/notre-dame.png")
+
+      .span-17#preview
+        %img(src="images/header_line1.png" class= 'h-line')
+        = yield
 
       .span-17.last#footer
         %img(src="images/footer_flourish.png")

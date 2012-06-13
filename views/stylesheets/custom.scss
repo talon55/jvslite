@@ -20,6 +20,13 @@ $main-width: 670px;
   -moz-transform: scale($width, $height); /* Firefox */
 }
 
+@font-face
+{
+  font-family: ImpactBackup;
+  src: url('/images/impact.ttf')
+
+}
+
 .span-17{
   margin: 0 15px
 }
@@ -62,7 +69,7 @@ ul{
 
 body {
   background-color: $main-color;
-  font-family: Impact, sans-serif;
+  font-family: Impact, ImpactBackup, sans-serif;
 }
 
 header {
@@ -117,7 +124,7 @@ header {
 #whomade {
   width: 468px;
   img {
-    margin: 14px 16px;
+    margin: 18px 16px 17px 16px;
   }
 }
 
@@ -135,7 +142,7 @@ section {
 
 #bodytext {
   width: 468px;
-  height: 340px;
+  height: 345px;
   background-color: #d5c9a8 ;
 
     h1 {
@@ -153,6 +160,9 @@ section {
 }
 
 .imgbanner {
+  width: 165px;
+  height: 345px;
+
   img {
     display: table-cell;
     margin: 3px auto;
@@ -173,12 +183,18 @@ section h1 {
 
 #footer {
   margin-top: 15px;
+
+  img {
+    margin-left: -5px;
+  }
 }
 
 /* Links */
 
 a {
   text-decoration: none;
+  font-weight: normal;
+  color: $red-color;
 }
 
 a:hover {
@@ -186,6 +202,12 @@ a:hover {
 }
 
 a:visited {
+  color: #bdaf82;
+}
+
+#main {
+  font-size: 24px;
+  text-align: center;
 }
 
 /* Navigation */
