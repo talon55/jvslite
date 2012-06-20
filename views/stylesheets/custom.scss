@@ -23,7 +23,7 @@ $main-width: 670px;
 @font-face
 {
   font-family: ImpactBackup;
-  src: url('/images/impact.ttf')
+  src: url('#{$source}/impact.ttf')
 
 }
 
@@ -69,7 +69,7 @@ ul{
 
 body {
   background-color: $main-color;
-  font-family: Impact, ImpactBackup, sans-serif;
+  font-family:  ImpactBackup, sans-serif;
 }
 
 header {

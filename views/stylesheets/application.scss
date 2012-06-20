@@ -9,5 +9,7 @@
 
 /* Sass import commands. Files imported later have higher priority.
     Thus, since blueprint/screen is on top, it's priority is lowest*/
+$source: "http://d1zguf60fl3jx1.cloudfront.net/jvslite";
+
 @import "blueprint/screen.scss";
 @import "custom.scss";
