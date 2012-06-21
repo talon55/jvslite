@@ -7,35 +7,44 @@
     .container
       .span-17
         %header
-          %img(src="images/header_line1.png" class= 'h-line')
+          .h-line
 
           %section
-            %span#left-hand
-              %img(src="images/hand_left.png")
+            .left-hand
             %span#title
               %div JOHNNYVILLE SLUGGER
-            %span#right-hand
-              %img(src="images/hand_right.png")
+            .right-hand
 
-          %img(src="images/header_line1.png" class= 'h-line')
+          .h-line
 
       .span-17
+
         #whomade.left
           %img(src="#{source}/whomade.png")
         .redstar
         .imgbanner.left
           %img(src="#{source}/stones.png")
           %img(src="#{source}/vinnie.png")
+      / secondary header
+      .span-17
+        %header
+          .h-line
 
+          %section
+            .left-hand
+            %span#best
+              %div THE BEST GIFT IN THE HISTORY OF THE WORLD FOR UNDER $200
+            .right-hand
+
+          .h-line
 
       .span-17
-        %img(src="images/header_line1.png" class= 'h-line')
 
         .imgbanner.left
           %img(src="#{source}/scriptmade.png" style="margin-top: 35px;")
           %img#logo(src="#{source}/logo.png" style="margin-top: 35px;")
         .redstar
-        %section#bodytext.left
+        %section.bodytext.left
           %h1 CUSTOM-MADE BASEBALL BATS
           %p
             Johnnyville Slugger is your source for the best custom-engraved baseball bats you’ve ever seen. Using only the finest ash, oak, and maple wood, Johnnyville Slugger works hard to create a bat you’re proud to hold, display and show off.
@@ -47,9 +56,9 @@
             We specialize in putting your custom logo and signature on the bat you choose. Whatever you think of, we can create.
 
       .span-17
-        %img(src="images/header_line1.png" class= 'h-line')
+        .h-line
 
-        %section#bodytext.left
+        %section.bodytext.left
           %h1 THE BEST POSSIBLE GIFT FOR UNDER $200
           %p
             text
@@ -59,8 +68,8 @@
           %img(src="#{source}/notre-dame.png")
 
       .span-17#preview
-        %img(src="images/header_line1.png" class= 'h-line')
+        .h-line
         = yield
 
       .span-17.last#footer
-        %img(src="images/footer_flourish.png")
+        /%img(src="images/footer_flourish.png")

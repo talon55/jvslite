@@ -63,6 +63,7 @@ ul{
   width: 700px;
   margin-top: 20px;
   margin-bottom: 20px;
+  padding-top: 20px;
   padding-bottom: 3px;
   background-color: $container-color
 }
@@ -73,7 +74,7 @@ body {
 }
 
 header {
-  padding-top: 20px;
+  //padding-top: 20px;
   //height: 75px;
 
   nav {
@@ -84,10 +85,6 @@ header {
   color: #bdaf82;
   float: center;
   height: 40px;
-  }
-
-  .h-line{
-    margin: 0 2px;
   }
 
   section{
@@ -103,22 +100,50 @@ header {
         line-height: 1.2;
         text-align: center;
         color: $text-color;
-        font-size: 60px; // 5em = 60px since default is 12px
+        font-size: 5em; // 5em = 60px since default is 12px
         }
     }
 
-    span#left-hand{
+    span#best {
+      width:548px;
       float: left;
-      width: 51px;
-      padding: 24px 5px
+      div {
+        width:548px;
+        line-height: 1.2;
+        text-align: center;
+        color: $text-color;
+        font-size: 2.5em; // 5em = 60px since default is 12px
+        }
     }
 
-    span#right-hand{
+    .left-hand {
+      float: left;
+      display: block;
+      width: 61px;
+      height: 74px;
+      background-image: url(/images/hand_left.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+
+    .right-hand{
       float: right;
-      width: 51px;
-      padding: 24px 5px
+      display: block;
+      width: 61px;
+      height: 74px;
+      background-image: url(/images/hand_right.png);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
     }
   }
+}
+
+.h-line{
+  margin: 5px 2px;
+  width: 666px;
+  height: 8px;
+  display: block;
+  background-image: url(/images/header_line1.png);
 }
 
 #whomade {
@@ -140,7 +165,7 @@ section {
   background: #fff;
 }
 
-#bodytext {
+.bodytext {
   width: 468px;
   height: 345px;
   background-color: #d5c9a8 ;
@@ -178,15 +203,18 @@ img#logo {
 }
 
 section h1 {
-  font-size: 200%;
+  font-size: 2em;
 }
 
 #footer {
   margin-top: 15px;
-
-  img {
-    margin-left: -5px;
-  }
+  margin-left: 10px;
+  width: 675px;
+  height: 35px;
+  display: block;
+  background-image: url(/images/footer_flourish.png);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
 }
 
 /* Links */
