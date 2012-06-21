@@ -3,6 +3,7 @@ $text-color: #922522;
 $main-color: #e3d7bd;
 $container-color: #f9f4df;
 $wood-color: #9d8648;
+$section-color: #d5c9a8;
 $main-width: 670px;
 
 
@@ -73,6 +74,12 @@ body {
   font-family:  ImpactBackup, sans-serif;
 }
 
+p {
+      color: darken($red-color, 5%);
+      font-family: 'Arial-Black', 'Arial Black', sans-serif;
+      font-weight: 800;
+}
+
 header {
   //padding-top: 20px;
   //height: 75px;
@@ -89,7 +96,6 @@ header {
 
   section{
     height: 74px;
-    background-color: #d5c9a8;
 
     .main{
       float: left;
@@ -153,24 +159,21 @@ header {
 }
 
 section {
-  background: #fff;
+  background-color: $section-color;
 }
 
 .bodytext {
   width: 468px;
   height: 345px;
-  background-color: #d5c9a8 ;
 
     h1 {
-      color: #9d8748;
+      font-size: 2em;
+      color: $wood-color;
       margin: 15px 0px 0px 20px;
     }
 
     p {
-      color: darken($red-color, 5%);
-      font-family: 'Arial-Black', 'Arial Black', sans-serif;
       font-size: 13px;
-      font-weight: 800;
       margin: 15px 10px 0px 20px
     }
 }
@@ -193,10 +196,6 @@ img#logo {
   height: 100px;
 }
 
-section h1 {
-  font-size: 2em;
-}
-
 #footer {
   margin-top: 15px;
   margin-left: 10px;
@@ -206,6 +205,50 @@ section h1 {
   background-image: url(/images/footer_flourish.png);
   background-repeat: no-repeat;
   background-position: 0% 0%;
+}
+
+/* Gallery */
+
+#gallery {
+
+  .left {
+    margin-right: 10px;
+  }
+
+  .right {
+    margin-left: 10px;
+  }
+
+  .separator {
+    width: 670px;
+    height: 1px;
+    display: block;
+    float: left;
+  }
+}
+
+.frame {
+  width: 325px;
+  //height: 300px;
+  margin: 5px auto;
+  background-color: $section-color;
+
+  h3 {
+    font-size: 1.5em;
+    text-align: center;
+    color: $wood-color;
+    margin: 5px;
+  }
+
+  img {
+    width: 315px;
+    height: auto;
+    margin: 0 5px;
+  }
+
+  p {
+    margin: 5px;
+  }
 }
 
 /* Links */

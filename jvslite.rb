@@ -3,8 +3,9 @@ require 'sinatra'
 require 'haml'
 
 configure do
+  source = "http://d1zguf60fl3jx1.cloudfront.net/jvslite"
   set :haml, {:format => :html5, :escape_html => false,
-    locals: {source: "http://d1zguf60fl3jx1.cloudfront.net/jvslite"}}
+    locals: {source: source, gallery: source + "/gallery"}}
   set :scss, {:style => :compact, :debug_info => false}
   Compass.add_project_configuration(File.join(Sinatra::Application.root, 'config', 'compass.rb'))
 end
