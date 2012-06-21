@@ -5,41 +5,38 @@
     %link(rel="stylesheet" href="/stylesheets/application.css")
   %body
     .container
+
+      / primary header
       .span-17
         %header
           .h-line
-
           %section
             .left-hand
-            %span#title
-              %div JOHNNYVILLE SLUGGER
+            .main#title JOHNNYVILLE SLUGGER
             .right-hand
-
           .h-line
 
+      / main banner
       .span-17
-
         #whomade.left
           %img(src="#{source}/whomade.png")
         .redstar
         .imgbanner.left
           %img(src="#{source}/stones.png")
           %img(src="#{source}/vinnie.png")
+
       / secondary header
       .span-17
         %header
           .h-line
-
           %section
             .left-hand
-            %span#best
-              %div THE BEST GIFT IN THE HISTORY OF THE WORLD FOR UNDER $200
+            .main#best THE BEST GIFT IN THE HISTORY OF THE WORLD FOR UNDER $200
             .right-hand
-
           .h-line
 
+      / first text block
       .span-17
-
         .imgbanner.left
           %img(src="#{source}/scriptmade.png" style="margin-top: 35px;")
           %img#logo(src="#{source}/logo.png" style="margin-top: 35px;")
@@ -55,9 +52,9 @@
             %br
             We specialize in putting your custom logo and signature on the bat you choose. Whatever you think of, we can create.
 
+      / second text block
       .span-17
         .h-line
-
         %section.bodytext.left
           %h1 THE BEST POSSIBLE GIFT FOR UNDER $200
           %p
@@ -67,6 +64,7 @@
           %img(src="#{source}/who.png")
           %img(src="#{source}/notre-dame.png")
 
+      / gallery
       .span-17#preview
         .h-line
         = yield

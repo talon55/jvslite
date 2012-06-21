@@ -91,29 +91,20 @@ header {
     height: 74px;
     background-color: #d5c9a8;
 
-
-    span#title {
-      width:548px;
+    .main{
       float: left;
-      div {
-        width:548px;
-        line-height: 1.2;
-        text-align: center;
-        color: $text-color;
-        font-size: 5em; // 5em = 60px since default is 12px
-        }
+      width:548px;
+      line-height: 1.2;
+      text-align: center;
+      color: $text-color;
     }
 
-    span#best {
-      width:548px;
-      float: left;
-      div {
-        width:548px;
-        line-height: 1.2;
-        text-align: center;
-        color: $text-color;
-        font-size: 2.5em; // 5em = 60px since default is 12px
-        }
+    #title {
+      font-size: 5em; // 5em = 60px since default is 12px
+    }
+
+    #best {
+      font-size: 2.5em; // 5em = 60px since default is 12px
     }
 
     .left-hand {
