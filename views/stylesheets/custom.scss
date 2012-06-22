@@ -178,6 +178,16 @@ section {
     }
 }
 
+#info {
+  text-align: center;
+
+  p {
+    font-size: 15px;
+    padding-top: 40px;
+  }
+
+}
+
 .imgbanner {
   width: 165px;
   height: 345px;
@@ -213,17 +223,12 @@ img#logo {
 
   .left {
     margin-right: 10px;
+    clear: left;
   }
 
   .right {
     margin-left: 10px;
-  }
-
-  .separator {
-    width: 670px;
-    height: 1px;
-    display: block;
-    float: left;
+    clear: right;
   }
 }
 
