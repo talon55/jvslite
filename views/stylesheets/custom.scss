@@ -221,20 +221,23 @@ img#logo {
 
 #gallery {
 
-  .left {
-    margin-right: 10px;
-    clear: left;
-  }
+  .row {
 
-  .right {
-    margin-left: 10px;
-    clear: right;
+    .left {
+      margin-right: 10px;
+      clear: left;
+    }
+
+    .right {
+      margin-left: 10px;
+      clear: right;
+    }
   }
 }
 
 .frame {
   width: 325px;
-  //height: 300px;
+  height: 100%;
   margin: 5px auto;
   background-color: $section-color;
 
