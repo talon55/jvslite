@@ -3,6 +3,8 @@
   %head
     %title JOHNNYVILLE SLUGGER
     %link(rel="stylesheet" href="/stylesheets/application.css")
+    %script(type="text/javascript" src="#{source}/jquery.js")
+    %script(type="text/javascript" src="/javascripts/application.js")
   %body
     .container
 
@@ -12,7 +14,9 @@
           .h-line
           %section
             .left-hand
-            .main#title JOHNNYVILLE SLUGGER
+            .main#title
+              %a{href: "/"}
+                JOHNNYVILLE SLUGGER
             .right-hand
           .h-line
 
@@ -44,7 +48,7 @@
         %section.bodytext.left
           %h1 BASEBALL BATS - MADE YOUR WAY!
           %p
-            Johnnyville Slugger creates the best custom-engraved baseball bats you’ve ever seen. We work hard to create a bat you’re proud to hold, display and show off. We specialize in putting your custom logo and signature on the bat you choose.
+            Johnnyville Slugger creates the best custom-engraved baseball bats you’ve ever seen. We work hard to create a bat you’ll be proud to hold, display and show off. We specialize in putting your custom logo and signature on the bat you choose.
             %br
             %br
             We design unique gifts to impress folks who have everything: corporate gifts, graduation, birthday, retirement, wedding and baby gifts.
@@ -61,7 +65,9 @@
             CALL: JOHNNY S at 216-470-4838
             %br
             %br
-            EMAIL: johnnys@johnnyvilleslugger.com
+            EMAIL:
+            %a{href:"mailto: johnnys@johnnyvilleslugger.com", class: "mail"}
+              johnnys@johnnyvilleslugger.com
             %br
             %br
             VISIT: 1826 W 25th STREET
@@ -72,7 +78,7 @@
         .redstar
         .imgbanner.left
           %img(src="#{source}/who.png")
-          %img(src="#{source}/indians.png")
+          %img(src="#{source}/navy.png")
 
       / dynamic
       .span-17#preview
