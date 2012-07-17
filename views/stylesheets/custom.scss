@@ -246,13 +246,13 @@ img#logo {
 .frame {
   width: 325px;
   height: 100%;
-  margin: 5px auto;
+  margin: 10px auto;
   background-color: $section-color;
 
   h3 {
     font-size: 1.5em;
     text-align: center;
-    color: $wood-color;
+    color: darken($red-color, 10%);
     margin: 5px;
   }
 
@@ -264,6 +264,7 @@ img#logo {
 
   p {
     margin: 5px;
+    text-align: center;
   }
 }
 
