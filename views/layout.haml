@@ -23,11 +23,11 @@
       / main banner
       .span-17
         #whomade.left
-          %img(src="#{source}/whomade.png")
+          = image_tag "whomade.png"
         .redstar
         .imgbanner.left
-          %img(src="#{source}/stones.png")
-          %img(src="#{source}/vinnie.png")
+          = image_tag "stones.png"
+          = image_tag "vinnie.png"
 
       / secondary header
       .span-17
@@ -42,8 +42,8 @@
       / first text block
       .span-17
         .imgbanner.left
-          %img(src="#{source}/scriptmade.png" style="margin-top: 35px;")
-          %img#logo(src="#{source}/logo.png" style="margin-top: 35px;")
+          = image_tag "scriptmade.png",nil , "style=\"margin-top: 35px;\""
+          = image_tag "logo.png", nil, "style=\"margin-top: 35px;\" id=\"logo\""
         .redstar
         %section.bodytext.left
           %h1 BASEBALL BATS - MADE YOUR WAY!
@@ -78,8 +78,8 @@
 
         .redstar
         .imgbanner.left
-          %img(src="#{source}/who.png")
-          %img(src="#{source}/navy.png")
+          = image_tag "who.png"
+          = image_tag "navy.png"
 
       / dynamic
       .span-17#preview
@@ -87,4 +87,3 @@
         = yield
 
       .span-17.last#footer
-        /%img(src="images/footer_flourish.png")

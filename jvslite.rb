@@ -2,7 +2,7 @@ require 'compass'
 require 'sinatra'
 require 'haml'
 
-source = "http://d1zguf60fl3jx1.cloudfront.net/jvslite"
+source = "http://d1zguf60fl3jx1.cloudfront.net/jvslite" #only used in one place now
 
 configure do
   set :haml, {:format => :html5, :escape_html => false,
@@ -26,14 +26,26 @@ get '/preview' do
   haml :preview, locals: {page: "preview"}
 end
 
+get '/lifestory' do
+  haml :lifestory, locals: {page: "lifestory"}
+end
+
+get '/pro_baseball' do
+  haml :pro_baseball, locals: {page: "pro_baseball"}
+end
+
 #helper methods
 
 helpers do
-  def gallery_tag name, page=nil
+  def image_tag name, page=nil, options=nil # refactor with args hash
     if page
-      "<img src=\"http://d1zguf60fl3jx1.cloudfront.net/jvslite/gallery/#{page}/#{name}\">"
+      "<img src=\"http://d1zguf60fl3jx1.cloudfront.net/jvslite/gallery/#{page}/#{name}\" #{options}>"
     else
-      "<img src=\"http://d1zguf60fl3jx1.cloudfront.net/jvslite/gallery/#{name}\">"
+      "<img src=\"http://d1zguf60fl3jx1.cloudfront.net/jvslite/#{name}\" #{options}>"
     end
+  end
+
+  def partial(page, options={})
+    haml page.to_sym, options.merge!(:layout => false)
   end
 end
