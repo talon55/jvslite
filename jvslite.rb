@@ -22,17 +22,27 @@ get '/' do
   haml :index
 end
 
-get '/preview' do
-  haml :preview, locals: {page: "preview"}
+get '/:page' do
+  begin
+    haml params[:page].to_sym, locals: {page: params[:page]}
+  rescue Errno::ENOENT
+    not_found
+  end
 end
 
-get '/lifestory' do
-  haml :lifestory, locals: {page: "lifestory"}
-end
+not_found {haml :'404', layout: false} # graceful 404s
 
-get '/pro_baseball' do
-  haml :pro_baseball, locals: {page: "pro_baseball"}
-end
+#get '/preview' do #replace these with :page
+#  haml :preview, locals: {page: "preview"}
+#end
+
+#get '/lifestory' do
+#  haml :lifestory, locals: {page: "lifestory"}
+#end
+
+#get '/pro_baseball' do
+#  haml :pro_baseball, locals: {page: "pro_baseball"}
+#end
 
 #helper methods
 
