@@ -1,0 +1,9 @@
+.span-17#links
+  .h-line
+  #main
+    Want More?
+    %br
+    - links.each do |page, text|
+      %ul
+        %li
+          %a(href='/#{page}#preview') #{text}

@@ -23,8 +23,13 @@ get '/' do
 end
 
 get '/:page' do
+  links = { preview: "JOHNNY'S FAVORITES",
+            life_story: "LIFESTORY",
+            pro_baseball: "PRO BASEBALL"
+            }.delete_if {|key, value| key == params[:page].to_sym}
+
   begin
-    haml params[:page].to_sym, locals: {page: params[:page]}
+    haml params[:page].to_sym, locals: {page: params[:page], links: links}
   rescue Errno::ENOENT
     not_found
   end
