@@ -2,64 +2,58 @@
   .row
     .frame.left
       %h3 Gentleman Jack
-      = image_tag "01.png", page
+      = image_tag "01.png"
       %p Honey Amber on Oak
     .frame.right
       %h3 This Corporate Logo is Art!
-      = image_tag "02.png", page
+      = image_tag "02.png"
       %p Silver on Maple
 
   .row
     .frame.left
       %h3 West Side Market
-      = image_tag "03.png", page
+      = image_tag "03.png"
       %p Honey Amber on Curly Maple
 
     .frame.right
       %h3 Tilted Kilt
-      = image_tag "04.png", page
+      = image_tag "04.png"
       %p Translucent Red on Maple
 
   .row
     .frame.left
       %h3 A Life Story Bat
-      = image_tag "05.png", page
+      = image_tag "05.png"
       %p Black Cherry on Maple
 
     .frame.right
       %h3 A Grandpa’s Family
-      = image_tag "06.png", page
+      = image_tag "06.png"
       %p Honey Amber on Ash
 
   .row
     .frame.left
       %h3 Cleveland Indians
-      = image_tag "07.png", page
+      = image_tag "07.png"
       %p Light Oak Finish on Oak
 
     .frame.right
       %h3 Ohio State
-      = image_tag "08.png", page
+      = image_tag "08.png"
       %p Pearl White on Maple
 
   .row
     .frame.left
       %h3 Bob Marley
-      = image_tag "09.png", page
+      = image_tag "09.png"
       %p Black on Maple
 
     .frame.right
       %h3 Great Lakes Brewery
-      = image_tag "10.png", page
+      = image_tag "10.png"
       %p Rosewood on Oak
   .row
-    .frame.left
-      %h3 More Corporate Art
-      = image_tag "11.png", page
-      %p Pearl White on Maple
-    .frame.right
-      %h3 St. Edward High School
-      = image_tag "12.png", page
-      %p Translucent Green on Maple
+    = frame_tag :left, "More Corporate Art", "11.png", "Pearl White on Maple"
+    = frame_tag :right, "St. Edward High School", "12.png", "Translucent Green on Maple"
 
-= haml :_links, locals: {links: links}
+= haml :_links

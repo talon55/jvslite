@@ -3,7 +3,7 @@
   #main
     Want More?
     %br
-    - links.each do |page, text|
+    - @links.each do |page, text|
       %ul
         %li
           %a(href='/#{page}#preview') #{text}
