@@ -74,4 +74,12 @@ helpers do
   def frame_tag side, title, image, description
     haml :_frame, {locals: {side: side, title: title, image: image, description: description}, layout: false}
   end
+  
+  def image_name img_number
+    if img_number < 10
+      "0#{img_number}.png"
+    else
+      "#{img_number}.png"
+    end
+  end
 end
