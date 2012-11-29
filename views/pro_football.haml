@@ -1,3 +1,9 @@
+- text = send (@page+"_text").to_sym
+
 #gallery
+	- (text.length/2).times do |i|
+		.row
+			= frame_tag :left, text[2*i][0], image_name(2*i+1), text[2*i][1]
+			= frame_tag :right, text[2*i+1][0], image_name(2*i+2), text[2*i+1][1]
 
 = haml :_links
