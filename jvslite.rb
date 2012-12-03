@@ -22,14 +22,22 @@ end
 
 get '/:page' do
   @page = params[:page]
-  @links = { preview: "JOHNNY'S FAVORITES",
+  @links = {preview: "JOHNNY'S FAVORITES",
             life_story: "LIFESTORY",
             pro_baseball: "PRO BASEBALL",
-            pro_football: "PRO FOOTBALL"
+            pro_football: "PRO FOOTBALL",
+            corporate: "CORPORATE",
+            high_school: "HIGH SCHOOL"
             }.delete_if {|key, value| key == @page.to_sym}
   
+  old_style = ['preview','life_story','pro_baseball'] # pages using the legacy haml
+  
   begin
-    haml params[:page].to_sym 
+    unless old_style.include? @page
+      haml :gallery
+    else
+      haml params[:page].to_sym 
+    end
   rescue Errno::ENOENT
     not_found
   end
@@ -86,6 +94,44 @@ helpers do
   
   # Page Text Helpers
   # FFS, these need to be moved to a database!  
+  def corporate_text
+    [["Chase","Natural Finish on Oak"], # 01.png
+    ["Emrys Partners","Translucent Yellow on Curly Maple"], # 02.png
+    ["Tire Exchange & Warner Brothers ","Black on Maple"], # 03.png
+    ["ESPN Cleveland","Opaque Red on Maple"], # 04.png
+    ["Mechanic Street","Silver on Maple"], # 05.png
+    ["Chicago Fundamental","Opaque White on Maple"], # 06.png
+    ["Post Alloy","Black Cherry on Ash"], # 07.png
+    ["Raging Wolf Solutions","Black on Ash"], # 08.png
+    ["Vertical Knowledge","Black on Maple"], # 09.png
+    ["Cobalt Capital","Translucent Blue on Maple"], # 10.png
+    ["Delta Psychological","Translucent Green on Maple"], # 11.png
+    ["Joebees Bee Great!","Translucent Yellow on Maple"], # 12.png
+    ["Brighton Best","Black on Maple"], # 13.png
+    ["Ralph Lauren","Translucent Blue on Maple"], # 14.png
+    ["Something New Florists","Pearl White on Maple"], # 15.png
+    ["Locus Corp, Indians and Golf Clubs","Light Oak Finish on Oak"]] # 16.png
+  end
+  
+  def high_school_text
+    [["Aurora vs. Chagrin Falls Big Stick","Linseed Oil on Oak"], # 01.png
+    ["Lake Catholic vs. Cardinal Mooney","Linseed Oil on Oak"], # 02.png
+    ["Avon Lake vs. Avon Big Stick Award","Honey Amber on Oak"], # 03.png
+    ["St. Ignatius","Translucent Yellow on Ash"], # 04.png
+    ["St. Edward","Translucent Green on Maple"], # 05.png
+    ["Gilmour Academy, UNC","Honey Amber on Oak"], # 06.png
+    ["Brecksville Bees","Translucent Yellow on Maple"], # 07.png
+    ["Massillon Tigers","Black on Maple"], # 08.png
+    ["Padua Franciscan","Black Cherry on Oak"], # 09.png
+    ["Nordonia Knights","Pearl White on Maple"], # 10.png
+    ["Wadsworth","Natural Finish on Oak"], # 11.png
+    ["Crestview","Black on Maple"], # 12.png
+    ["Diamond Boys","Translucent Red on Oak"], # 13.png
+    ["The Chosen Ones","Black Cherry on Oak"], # 14.png
+    ["CABA Most Valuable Player","Translucent Blue on Maple"], # 15.png
+    ["CABA Most Valuable Hitter","Translucent Red on Maple"]] # 16.png
+  end
+  
   def pro_football_text
     [["Chicago Bears","Honey Amber on Oak"], # 01.png
 	  ["NY Jets","Light Oak Finish on Oak"], # 02.png
