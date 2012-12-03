@@ -20,6 +20,10 @@ get '/' do
   haml :index
 end
 
+get '/vinnie' do
+  haml :vinnie, layout: false
+end
+
 get '/:page' do
   @page = params[:page]
   @links = {preview: "JOHNNY'S FAVORITES",
@@ -38,7 +42,7 @@ get '/:page' do
     else
       haml params[:page].to_sym 
     end
-  rescue Errno::ENOENT
+  rescue Errno::ENOENT, NoMethodError
     not_found
   end
 end
@@ -69,7 +73,7 @@ helpers do
     # the layout since it's the only place that doesn't rely on an @page variable
     
     #puts page + " " + name
-    if page == "layout"
+    if page == "layout" or page == "vinnie"
       "<img src=\"http://d1zguf60fl3jx1.cloudfront.net/jvslite/#{name}\" #{options}>"
     else
       "<img src=\"http://d1zguf60fl3jx1.cloudfront.net/jvslite/gallery/#{@page}/#{name}\" #{options}>"

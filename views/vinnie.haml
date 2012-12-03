@@ -2,10 +2,15 @@
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
   %head
     %title JOHNNYVILLE SLUGGER
-    /%link(rel="stylesheet" href="/stylesheets/application.css")
+    %link(rel="stylesheet" href="/stylesheets/application.css")
     %script(type="text/javascript" src="http://d1zguf60fl3jx1.cloudfront.net/jvslite/jquery.js")
     %script(type="text/javascript" src="/javascripts/404.js")
   %body
-    %h1 Sorry, this page doesn't exist.
-    %br
-    Don't worry, we're taking you back to somewhere safe
+    .container
+      .span-17
+        = image_tag "vinnie.png", "class='center'"
+        %header
+          .h-line
+          %section
+            .main#vinnie This page is a tribute to a great man.
+          .h-line
