@@ -87,19 +87,19 @@ helpers do
   # Page Text Helpers
   # FFS, these need to be moved to a database!  
   def pro_football_text
-    [["Chicago Bears","Honey Amber on Oak"],
-	  ["NY Jets","Light Oak Finish on Oak"],
-	  ["Miami Dolphins","Translucent Orange on Maple"],
-	  ["Cleveland Browns","Honey Amber on Oak"],
-	  ["New Orleans Saints","Black on Maple"],
-	  ["Green Bay Packers","Translucent Yellow on Maple"],
-	  ["Steelers Green Bay Superbowl","Translucent Yellow on Maple"],
-	  ["Steelers Lombardy Trophy","Black on Maple"],
-	  ["Steelers Polamalu","Translucent Yellow on Maple"],
-	  ["Steelers Jack Lambert","Translucent Yellow on Maple"],
-	  ["Cincinnati Bengals","Translucent Orange on Maple"],
-	  ["Cleveland Gladiators","Translucent Red on Maple"],
-	  ["Minnesota Vikings","Translucent Purple on Maple"],
-	  ["Oakland Raiders","Black on Maple"]]
+    [["Chicago Bears","Honey Amber on Oak"], # 01.png
+	  ["NY Jets","Light Oak Finish on Oak"], # 02.png
+	  ["Miami Dolphins","Translucent Orange on Maple"], # 03.png
+	  ["Cleveland Browns","Honey Amber on Oak"], # 04.png
+	  ["New Orleans Saints","Black on Maple"], # 05.png
+	  ["Green Bay Packers","Translucent Yellow on Maple"], #06.png
+	  ["Steelers Green Bay Superbowl","Translucent Yellow on Maple"], # 07.png
+	  ["Steelers Lombardy Trophy","Black on Maple"], # 08.png
+	  ["Steelers Polamalu","Translucent Yellow on Maple"], # 09.png
+	  ["Steelers Jack Lambert","Translucent Yellow on Maple"], # 10.png
+	  ["Cincinnati Bengals","Translucent Orange on Maple"], # 11.png
+	  ["Cleveland Gladiators","Translucent Red on Maple"], # 12.png
+	  ["Minnesota Vikings","Translucent Purple on Maple"], # 13.png
+	  ["Oakland Raiders","Black on Maple"]] # 14.png
   end
 end
